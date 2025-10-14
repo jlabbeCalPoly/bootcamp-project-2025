@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>
-            Blogs
+            Contact
         </title>
         <link rel="stylesheet" href="../Styles/styles.css">
     </head>
@@ -21,10 +20,20 @@
         </nav>
         <main>
             <h3>
-                Check out some of the published blogs below!
+                Fill out the form to get in contact
             </h3>
-            <div id="blog-container"></div>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name"/>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email"/>
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Message"></textarea>
+                <input type="submit"/>
+            </form>
         </main>
-        <script src="./blog.js"></script>
+        <footer class="footer">
+            "© 2023 Julian's Website | All Rights Reserved"
+        </footer>
     </body>
 </html>
