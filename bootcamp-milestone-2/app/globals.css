@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --navy: #0a1122;
+  --blue: #0b1c3d;
+  --aqua: rgba(0, 91, 127, 0.566);
+  --textColor: #e0e8ff;
+  --textHover: #ffffff;
+  --gradientBlue: #0099ff;
+  --gradientTeal: #00ffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(
+      circle at top left,
+      var(--aqua) 0%,
+      var(--blue) 60%
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--blue),
+      var(--navy)
+    );
+  background-attachment: fixed;
+  color: #e0e8ff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(120px);
+  z-index: 0;
+}
+
+/* Ensures all content stays above glow */
+.main-content {
+  position: relative;
+  z-index: 1;
 }
