@@ -1,19 +1,21 @@
-.logo {
+.logo a {
+    position: relative;
     background: linear-gradient(to right, var(--gradientBlue), var(--gradientTeal));
     background-size: 150% 150%;
     background-clip: text;                /* Standard syntax */
     -webkit-background-clip: text;        /* clips gradient to text shape */
     -webkit-text-fill-color: transparent; /* hides actual text color */
+    margin: 0 12px;
+
+    font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
-    letter-spacing: 1px;
-
-    font-family: monospace;
-    font-size: 20px;
+    font-size: 18px;
 
     transition: background-position 0.35s ease;
+    z-index: 2;
 }
 
-.logo:hover {
+.logo a:hover {
     background-position: 100%;
 }

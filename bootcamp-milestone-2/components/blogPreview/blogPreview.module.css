@@ -1,0 +1,12 @@
+.blogPreviewContainer {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    align-items: left; /* center content horizontally */
+}
+
+.blogPreviewContainer h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}

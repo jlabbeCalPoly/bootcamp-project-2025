@@ -1,0 +1,6 @@
+.blogListContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    margin: 0 12px;
+    gap: 12px;     /* Make space between each individual item within blogList */
+}

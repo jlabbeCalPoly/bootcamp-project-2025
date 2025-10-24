@@ -1,19 +1,18 @@
 import React from "react";
+import BlockContainer from "../blockContainer/blockContainer";
+import BlogType from "../blogType/blogType";
 import { Blog } from "@/static/blogData"; // importing the type/interface we defined earlier
-import style from "./blogPreview.module.css"
+import Style from "./blogPreview.module.css"
 
 export default function blogPreview(props: Blog) {
     return (
-		// replace everything between the <div> & </div> tags
-		// with your code from earlier milestones
-    <div className={style.div}>
-      <h3>{props.title}</h3>
-      <div>
-        <img/>
-        <p>Blog description</p>
-		    <p>Posted on...</p>
+    <BlockContainer>
+      <div className={Style.blogPreviewContainer}>
+        <img src={props.image} alt={props.imageAlt}/>
+        <BlogType category={props.category} date={props.date}/>
+        <h1>{props.title}</h1>
       </div>
-	  </div>
+    </BlockContainer>
   );
 }
 

@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0a1122;
-  --blue: #0b1c3d;
+  --navy: rgba(10, 17, 34); /* #0a1122 */
+  --blue: rgba(11, 28, 61); /* #0b1c3d; */
   --aqua: rgba(0, 91, 127, 0.566);
-  --textColor: #e0e8ff;
-  --textHover: #ffffff;
+  --mainTextColor: rgba(224, 232, 255);
+  --subTextColor: rgba(224, 232, 255, 0.4);
+  --textHover: rgba(255, 255, 255); /* #ffffff; */
   --gradientBlue: #0099ff;
   --gradientTeal: #00ffff;
 }
