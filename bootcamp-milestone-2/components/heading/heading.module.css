@@ -1,14 +1,14 @@
-.blogTypeContainer {
+.headingContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.blogTypeContainer h2 {
+.headingContainer h2 {
     font-family: sans-serif;
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--subTextColor)
+    color: var(--mainTextColor)
 }

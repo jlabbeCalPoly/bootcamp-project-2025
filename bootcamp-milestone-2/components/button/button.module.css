@@ -1,8 +1,10 @@
 .buttonContainer {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start; /* h2 starts on the right */
     align-items: center;
+    width: fit-content;
     overflow: hidden;
     padding-inline: 3px;
     border: 2px solid var(--subTextColor);

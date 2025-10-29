@@ -44,6 +44,7 @@ body::before {
   );
   filter: blur(100px);
   z-index: 0;
+  pointer-events: none;
 }
 
 body::after {
@@ -60,6 +61,7 @@ body::after {
   );
   filter: blur(120px);
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Ensures all content stays above glow */
