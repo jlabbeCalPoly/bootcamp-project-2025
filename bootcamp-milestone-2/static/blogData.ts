@@ -9,20 +9,20 @@ export interface Blog {
 
 const blogs: Blog[] = [
 	{
-        title: "Blog no. 1",
+        title: "How to make dynamic buttons using module scripts",
         date: "10/13/2025",
         category: "Code",
         image: "/tempIcon.png",
         imageAlt: "",
-        slug: "./blog1.html"
+        slug: "/blogs/buttonComponent"
     },
     {
-        title: "Blog no. 2",
+        title: "How to create user-friendly components for a settings page",
         date: "10/13/2025",
         category: "Code",
         image: "/tempIcon.png",
         imageAlt: "",
-        slug: "./blog2.html"
+        slug: "/blogs/settingComponent"
     }
 ]; 
 

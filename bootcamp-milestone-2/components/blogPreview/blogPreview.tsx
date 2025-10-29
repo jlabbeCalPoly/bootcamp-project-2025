@@ -9,13 +9,15 @@ export default function blogPreview(props: Blog) {
     return (
     <BlockContainer>
       <div className={Style.blogPreviewContainer}>
-        <div className={Style.blogPreviewImage}>
-          <img src={props.image} alt={props.imageAlt}/>
+        <div className={Style.blogPreviewBody}>
+          <div className={Style.blogPreviewImage}>
+            <img src={props.image} alt={props.imageAlt}/>
+          </div>
+          <BlogType category={props.category} date={props.date}/>
+          <h1>
+            {props.title}
+          </h1>
         </div>
-        <BlogType category={props.category} date={props.date}/>
-        <h1>
-          {props.title}
-        </h1>
         <BlogLinker slug={props.slug}/>
       </div>
     </BlockContainer>

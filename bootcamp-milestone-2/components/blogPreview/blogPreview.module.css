@@ -1,7 +1,17 @@
 .blogPreviewContainer {
     display: flex;
     flex-direction: column; /* stack items vertically */
+    justify-content: space-between;
     align-items: left; /* center content horizontally */
+    height: 100%;
+}
+
+.blogPreviewBody {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    justify-content: space-between;
+    align-items: left; /* center content horizontally */
+    margin-bottom: 5px;
 }
 
 .blogPreviewImage {
