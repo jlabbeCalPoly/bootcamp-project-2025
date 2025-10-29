@@ -1,6 +1,5 @@
 import React from "react";
 import Style from "./blogType.module.css";
-import { log } from "console";
 
 export default function BlogType({category, date}: { category: string, date: string }) {
     return (

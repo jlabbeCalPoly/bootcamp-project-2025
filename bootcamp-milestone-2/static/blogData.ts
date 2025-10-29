@@ -12,7 +12,7 @@ const blogs: Blog[] = [
         title: "Blog no. 1",
         date: "10/13/2025",
         category: "Code",
-        image: "../Assets/tempIcon.png",
+        image: "/tempIcon.png",
         imageAlt: "",
         slug: "./blog1.html"
     },
@@ -20,7 +20,7 @@ const blogs: Blog[] = [
         title: "Blog no. 2",
         date: "10/13/2025",
         category: "Code",
-        image: "../Assets/tempIcon.png",
+        image: "/tempIcon.png",
         imageAlt: "",
         slug: "./blog2.html"
     }

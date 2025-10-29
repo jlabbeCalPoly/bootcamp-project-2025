@@ -4,6 +4,16 @@
     align-items: left; /* center content horizontally */
 }
 
+.blogPreviewImage {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
 .blogPreviewContainer h1 {
     font-family: sans-serif;
     font-weight: bold;
