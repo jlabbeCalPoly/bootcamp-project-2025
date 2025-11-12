@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --navy: rgba(10, 17, 34); /* #0a1122 */
+  --blue: rgba(11, 28, 61); /* #0b1c3d; */
+  --aqua: rgba(0, 91, 127, 0.566);
+  --mainTextColor: rgba(224, 232, 255);
+  --subTextColor: rgba(224, 232, 255, 0.4);
+  --textHover: rgba(255, 255, 255); /* #ffffff; */
+  --gradientBlue: #0099ff;
+  --gradientTeal: #00ffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(
+      circle at top left,
+      var(--aqua) 0%,
+      var(--blue) 60%
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--blue),
+      var(--navy)
+    );
+  background-attachment: fixed;
+  color: #e0e8ff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensures all content stays above glow */
+.main-content {
+  position: relative;
+  z-index: 1;
+}

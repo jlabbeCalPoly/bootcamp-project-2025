@@ -1,0 +1,8 @@
+.resumeEntryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    width: 100%
+}
