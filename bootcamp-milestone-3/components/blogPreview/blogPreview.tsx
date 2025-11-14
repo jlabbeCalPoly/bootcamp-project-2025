@@ -2,7 +2,7 @@ import React from "react";
 import BlockContainer from "../blockContainer/blockContainer";
 import Subheading from "../subheading/subheading";
 import BlogLinker from "../blogLinker/blogLinker";
-import { Blog } from "@/static/blogData"; // importing the type/interface we defined earlier
+import { Blog } from "@/static/blogInterface"; // importing the type/interface we defined earlier
 import Style from "./blogPreview.module.css"
 
 export default function blogPreview(props: Blog) {

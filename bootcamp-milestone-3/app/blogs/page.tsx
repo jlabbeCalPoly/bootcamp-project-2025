@@ -7,7 +7,6 @@ import Blog from "@/src/database/blogSchema";
 export default async function BlogPage() {
     async function getBlogs() {
 	    await connectDB() // function from db.ts before
-        console.log("Connected")
 
 	    try {
 			// query for all blogs and sort by date

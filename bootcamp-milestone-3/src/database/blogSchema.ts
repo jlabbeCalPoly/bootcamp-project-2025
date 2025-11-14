@@ -10,7 +10,6 @@ type Blog = {
     slug: string
 };
 
-
 // mongoose schema 
 const blogSchema = new Schema<Blog>({
 	title: { type: String, required: true },

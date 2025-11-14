@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-export interface Portfolio {
+type Portfolio = {
     title: string,
     startDate: Date,
     endDate: Date,
@@ -20,7 +20,7 @@ const portfolioSchema = new Schema<Portfolio>({
     bullets: { type: [String], required: true }
 })
 
-const Portfolio = mongoose.models['portfolio'] ||
-    mongoose.model('portfolio', portfolioSchema);
+const Portfolio = mongoose.models['portfolios'] ||
+    mongoose.model('portfolios', portfolioSchema);
 
 export default Portfolio;

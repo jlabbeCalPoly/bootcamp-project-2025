@@ -12,10 +12,9 @@ export default function Navbar() {
     <header className={style.navbar}>
       <Logo />
       <nav className={style.navlist}>
-        <Link href="/">Home</Link>
         <Link href="/blogs">Blogs</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/about">Contact Me</Link>
+        <Link href="/portfolio">Portfolio</Link>
+        <Link href="/contact">Contact Me</Link>
       </nav>
     </header>
   );

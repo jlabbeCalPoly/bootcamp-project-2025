@@ -6,17 +6,19 @@
     align-items: center;
     width: fit-content;
     overflow: hidden;
-    padding-inline: 3px;
-    border: 2px solid var(--subTextColor);
-    border-radius: 4px;
+    background-color: var(--darkBlue);
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 9999px;
+    transition: all ease 0.1s;
 }
 
 .buttonContainer h2 {
-    font-family: sans-serif;
+    font-family: "Sofia";
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--subTextColor)
+    color: var(--white);
 }
 
 .buttonContainer img {
@@ -24,6 +26,10 @@
     width: 0;
     height: 13px;
     transition: all 0.3s;
+}
+
+.buttonContainer:hover {
+    background-color: var(--mediumBlue);
 }
 
 .buttonContainer:hover img {
