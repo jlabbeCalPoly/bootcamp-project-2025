@@ -30,7 +30,7 @@ export default function PortfolioPageLayout({data}: {data: Portfolio[]}) {
         <div className={Style.portfolioListContainer}>
             <Button text="Download Resume" slug={"/julianlabbe_resume_10-23-25.pdf"} type="download"/>
             {[...grouped].map(([category, portfolios]) => (
-                <PortfolioGroup category={category} portfolios={portfolios}/>
+                <PortfolioGroup key={category} category={category} portfolios={portfolios}/>
             ))}
         </div>
     )

@@ -11,8 +11,8 @@ export default function PortfolioGroup({category, portfolios}: {category: string
         <BlockContainer >
             <div className={Style.portfolioGroupContainer}>
                 <h2 className={Style.portfolioGroupCategory}>{category}</h2>
-                {portfolios.map(portfolio => 
-                    <PortfolioEntry portfolio={portfolio}/>
+                {portfolios.map((portfolio, idx) => 
+                    <PortfolioEntry key={idx} portfolio={portfolio}/>
                 )}
             </div>
         </BlockContainer>

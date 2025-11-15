@@ -1,0 +1,27 @@
+.datedImageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+}
+
+.datedImageContainer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.datedImageTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.datedImageTextContainer h2 {
+    font-family: "Sofia";
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    color: var(--black);
+}
