@@ -1,6 +1,6 @@
 .blockContainer {
     background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 6px rgba(11, 28, 61, 0.2); /* blue underglow */
+    box-shadow: 0 0 3px rgba(11, 28, 61, 0.2); /* blue underglow */
     padding: 10px;
     border-radius: 8px;
 }

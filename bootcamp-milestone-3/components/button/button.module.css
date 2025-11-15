@@ -28,6 +28,10 @@
     transition: all 0.3s;
 }
 
+.buttonImgRotated {
+    transform: rotate(-90deg);
+}
+
 .buttonContainer:hover {
     background-color: var(--mediumBlue);
 }

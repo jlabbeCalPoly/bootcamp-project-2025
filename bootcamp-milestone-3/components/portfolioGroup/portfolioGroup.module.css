@@ -1,0 +1,12 @@
+.portfolioGroupContainer {
+    width: 100%
+}
+
+.portfolioGroupCategory {
+  text-decoration: none;
+
+  font-family: "Sofia";
+  font-size: 16px;
+  color: var(--darkBlue);
+  margin-bottom: 10px;
+}
