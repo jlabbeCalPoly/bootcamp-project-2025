@@ -2,10 +2,10 @@ import React from "react";
 import BlockContainer from "../blockContainer/blockContainer";
 import Subheading from "../subheading/subheading";
 import BlogLinker from "../blogLinker/blogLinker";
-import { Blog } from "@/static/blogInterface"; // importing the type/interface we defined earlier
+import { BlogPreviewType } from "@/src/database/blogPreviewSchema";
 import Style from "./blogPreview.module.css"
 
-export default function blogPreview(props: Blog) {
+export default function blogPreview(props: BlogPreviewType) {
     return (
     <BlockContainer>
       <div className={Style.blogPreviewContainer}>
@@ -23,6 +23,3 @@ export default function blogPreview(props: Blog) {
     </BlockContainer>
   );
 }
-
-// <Subheading category={props.category} date={props.date.}/>
-// <BlogLinker slug={props.slug}/>

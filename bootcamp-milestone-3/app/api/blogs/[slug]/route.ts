@@ -1,7 +1,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "@/src/database/db"
-import blogSchema from "@/src/database/blogSchema"
+import BlogModel from "@/src/database/blogSchema"
 
 /* IParams is a TypeScript type definition that describes the structure of the second
    argument that Next.js passes to our API route handler.
@@ -22,9 +22,9 @@ import blogSchema from "@/src/database/blogSchema"
    /api/blog/[slug]/route.ts creates { params: { slug: "actual-slug-value" } }
 */
 type IParams = {
-		params: {
-			slug: string
-		}
+	params: {
+		slug: string
+	}
 }
 
 /*
@@ -40,15 +40,19 @@ type IParams = {
 	the second argument
 */
 export async function GET(req: NextRequest, { params }: IParams) {
-		// If { params } looks confusing, check the note below this code block
-		
+	// If { params } looks confusing, check the note below this code block
+
     await connectDB() // function from db.ts before
 		const { slug } = params // another destructure
 
+		console.log(slug);
+
 	   try {
-	        const blog = await blogSchema.findOne({ slug }).orFail()
+	        const blog = await BlogModel.findOne({ slug }).orFail()
+			console.log("here");
 	        return NextResponse.json(blog)
 	    } catch (err) {
+			console.log(`error: ${err}`);
 	        return NextResponse.json('Blog not found.', { status: 404 })
 	    }
 }

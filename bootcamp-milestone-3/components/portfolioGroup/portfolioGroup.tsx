@@ -5,8 +5,6 @@ import { Portfolio } from "@/static/portfolioInterface";
 import Style from "./portfolioGroup.module.css";
 
 export default function PortfolioGroup({category, portfolios}: {category: string, portfolios: Portfolio[]}) {
-    console.log(category);
-    console.log(portfolios);
     return (
         <BlockContainer >
             <div className={Style.portfolioGroupContainer}>

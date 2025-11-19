@@ -2,7 +2,7 @@ import React from "react";
 import BlogList from "@/components/blogList/blogList";
 import BlogPreview from "@/components/blogPreview/blogPreview";
 import connectDB from "@/src/database/db";
-import Blog from "@/src/database/blogSchema";
+import BlogPreviewModel from "@/src/database/blogPreviewSchema";
 
 export default async function BlogPage() {
     async function getBlogs() {
@@ -10,7 +10,7 @@ export default async function BlogPage() {
 
 	    try {
 			// query for all blogs and sort by date
-	        const blogs = await Blog.find().sort({ date: -1 }).orFail()
+	        const blogs = await BlogPreviewModel.find().sort({ date: -1 }).orFail()
             return blogs;
 	    } catch (err) {
             console.log(err);

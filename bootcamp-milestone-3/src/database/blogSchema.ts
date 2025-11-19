@@ -1,27 +1,27 @@
 import mongoose, { Schema } from "mongoose";
+import BlogComponent from "@/static/blogComponent";
+import IComment from "@/static/iComment";
 
-// typescript type (can also be an interface)
-type Blog = {
-	title: string,
+export type BlogType = {
+    title: string,
     date: Date,
     category: string,
-    image: string,
-    imageAlt: string,
-    slug: string
-};
+    content: BlogComponent[],
+    comments: IComment[],
+    slug: string,
+}
 
-// mongoose schema 
-const blogSchema = new Schema<Blog>({
-	title: { type: String, required: true },
-	date: { type: Date, required: false, default: new Date()},
+const blogSchema = new mongoose.Schema<BlogType>({
+    title: { type: String, required: true },
+    date: { type: Date, required: true },
     category: { type: String, required: true },
-	image: { type: String, required: true },
-	imageAlt: { type: String, required: true },
-    slug: { type: String, required: true }
+    content: { type: [Object], required: true },
+    comments:{ type: [Object], required: true },
+    slug: { type: String, required: true },
+
 })
 
-// defining the collection and model
-const Blog = mongoose.models['blogs'] ||
+const BlogModel = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
 
-export default Blog;
+export default BlogModel;

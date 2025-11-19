@@ -16,7 +16,7 @@ export default function Button({text, slug, type}: {text : string, slug : string
             return (
                 <Link className={Style.buttonContainer} href={slug}>
                     <h2>{text}</h2>
-                    <img className={Style.buttonImgRotated} src={"/download.svg"}/>
+                    <img src={"/link.svg"}/>
                 </Link>
             )
         default:

@@ -3,7 +3,6 @@ import connectDB from "@/src/database/db"
 import PortfolioSchema from "@/src/database/portfolioSchema"
 import { Portfolio } from "@/static/portfolioInterface"
 import PortfolioPageLayout from "@/components/portfolioPageLayout/portfolioPageLayout";
-import { Mongoose } from "mongoose";
 
 export default async function PortfolioPage() {
     async function getPortfolio() {
@@ -23,7 +22,6 @@ export default async function PortfolioPage() {
     }
 
     const portfolios = await getPortfolio()
-    console.log(portfolios);
     return (
         <PortfolioPageLayout data={portfolios}/>
     );
