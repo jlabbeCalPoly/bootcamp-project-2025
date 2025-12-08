@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --darkBlue: #1D5C9B; /* #0a1122 */
+  --mediumBlue: #5ca6de;
+  --lightBlue: #EEF7FE; /* #0b1c3d; */
+  --white: #FFFFFF;
+  --black: #060010;
+  --violet: #271e37;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+
+  /*
+  background: radial-gradient(
+      circle at top left,
+      var(--lightBlue) 0%,
+      var(--white) 60%
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--white),
+      var(--white)
+    );
+  background-attachment: fixed;
+  */
+  background-color: var(--black);
+
+  color: #262c41;
+}
+
+h1 {
+  font-family: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--white);
+}
+
+h2 {
+  font-family: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+p {
+  font-family: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./fonts/Figtree-VariableFont_wght.ttf");
+}
+
+/*
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--aqua) 0%,
+    transparent 70%
+  );
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+*/
+
+/* Ensures all content stays above glow */
+.main-content {
+  position: relative;
+  z-index: 1;
+}

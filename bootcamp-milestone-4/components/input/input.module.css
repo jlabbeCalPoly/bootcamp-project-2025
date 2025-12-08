@@ -1,0 +1,41 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBoxShared {
+    font-family: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    border-radius: 9999px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.inputBoxNormal {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inputBoxNormal:focus {
+    outline: None;
+    box-shadow: 0 0 10px rgb(39, 30, 55); /* optional glow */
+}
+
+.inputBoxError {
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.inputBoxError:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* optional glow */
+}
+
+.inputMessage {
+    height: 12px;
+    justify-self: center;
+    color: rgba(255, 0, 0, 1);
+}
+

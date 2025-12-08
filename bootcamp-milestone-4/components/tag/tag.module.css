@@ -1,0 +1,8 @@
+.tag {
+    font-family: "Sofia";
+    font-size: 11px;
+    padding-inline: 5px;
+    background-color: var(--mediumBlue);
+    color: var(--darkBlue);
+    border-radius: 9999px;
+}

@@ -1,0 +1,40 @@
+.loading {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.loadingDot {
+    background-color: var(--violet);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.small {
+    width: 10px;
+    height: 10px;
+}
+
+.large {
+    width: 30px;
+    height: 30px;
+}
+
+.one {
+    animation-delay: 0s;
+}
+
+.two {
+    animation-delay: 0.5s;
+}
+
+.three {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1) }
+    100% { transform: scale(1) }
+}

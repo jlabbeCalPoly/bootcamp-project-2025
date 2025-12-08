@@ -1,0 +1,14 @@
+.portfolioEntryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    gap: 5px;
+}
+
+.portfolioEntryDescription {
+    padding: 0;
+    font-family: "Sofia";
+    font-size: 11px;
+    color: var(--black);
+}

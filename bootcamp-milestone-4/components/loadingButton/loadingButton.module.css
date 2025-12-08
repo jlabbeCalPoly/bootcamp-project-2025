@@ -1,0 +1,53 @@
+.buttonContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* h2 starts on the right */
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+    background-color: var(--white);
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 9999px;
+}
+
+.buttonLoadingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContainer:hover {
+    cursor: pointer;
+}
+
+.buttonContainer img {
+    margin-left: 2px;
+    width: 12px;
+    height: 12px;
+}
+
+.buttonContainer h2 {
+    color: var(--violet);
+}
+
+.loadingVisible {
+    display: flex;
+}
+
+.loadingHidden {
+    display: none;
+}
+
+.contentVisible {
+    visibility: visible;
+}
+
+.contentHidden {
+    visibility: hidden;
+}

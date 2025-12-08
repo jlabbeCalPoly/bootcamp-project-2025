@@ -1,0 +1,6 @@
+.CommentListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Stops the comments from stretching across the entire axis, as well as justifying to the right */
+  gap: 5px;
+}
