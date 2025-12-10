@@ -7,6 +7,10 @@
   --white: #FFFFFF;
   --black: #060010;
   --violet: #271e37;
+
+  --transpareny05White: rgba(255, 255, 255, 0.05);
+  --transparency10White: rgba(255, 255, 255, 0.1);
+  --transparency40White: rgba(255, 255, 255, 0.40);
 }
 
 body {
@@ -38,6 +42,7 @@ h1 {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -1px;
+  line-height: 28px;
   color: var(--white);
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import BlockContainer from "../blockContainer/blockContainer";
 import Subheading from "../subheading/subheading";
-import BlogLinker from "../blogLinker/blogLinker";
+import Linker from "../linker/linker";
 import { BlogPreviewType } from "@/src/database/blogPreviewSchema";
 import Style from "./blogPreview.module.css"
 
@@ -18,7 +18,7 @@ export default function blogPreview(props: BlogPreviewType) {
             {props.title}
           </h1>
         </div>
-        <BlogLinker slug={props.slug}/>
+        <Linker text="Learn more" slug={props.slug}/>
       </div>
     </BlockContainer>
   );

@@ -4,7 +4,6 @@
     justify-content: space-between;
     align-items: left; /* center content horizontally */
     height: 100%;
-    gap: 5px;
 }
 
 .blogPreviewBody {
@@ -14,6 +13,10 @@
     align-items: left; /* center content horizontally */
 }
 
+.blogPreviewBody h1 {
+    margin-block: 5px;
+}
+
 .blogPreviewImage {
     display: flex;
     justify-content: center; /* horizontal */
@@ -21,13 +24,5 @@
     overflow: hidden;
     aspect-ratio: 16 / 9;
     border-radius: 8px;
-}
-
-.blogPreviewContainer h1 {
-    font-family: "Sofia";
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 20px;
-    margin-block: 5px;
+    margin-bottom: 2px;
 }

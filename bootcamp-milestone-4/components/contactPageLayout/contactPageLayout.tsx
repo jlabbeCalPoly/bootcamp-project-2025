@@ -56,73 +56,82 @@ export default function ContactPageLayout() {
       }),
     });
 
-    const body = await res.json();
-    // Success, email was sent and form data was validated
-    if (res.status === 200) {
-      const emptyStr = "";
+    try {
+      const body = await res.json();
 
-      // Reset the Name input field
-      const nameInput = document.getElementById("Name") as HTMLInputElement;
-      if (nameInput !== null) {
-        nameInput.value = emptyStr;
-        setName(emptyStr);
-        setNameErrorMsg(undefined);
-      }
+      // Success, email was sent and form data was validated
+      if (res.status === 200) {
+        const emptyStr = "";
 
-      // Reset the Email input field
-      const emailInput = document.getElementById("Email") as HTMLInputElement;
-      if (emailInput !== null) {
-        emailInput.value = emptyStr;
-        setEmail(emptyStr);
-        setEmailErrorMsg(undefined);
-      }
+        // Reset the Name input field
+        const nameInput = document.getElementById("Name") as HTMLInputElement;
+        if (nameInput !== null) {
+          nameInput.value = emptyStr;
+          setName(emptyStr);
+          setNameErrorMsg(undefined);
+        }
 
-      // Reset the Subject input field
-      const subjectInput = document.getElementById(
-        "Subject"
-      ) as HTMLInputElement;
-      if (subjectInput !== null) {
-        subjectInput.value = emptyStr;
-        setSubject(emptyStr);
-        setSubjectErrorMsg(undefined);
-      }
+        // Reset the Email input field
+        const emailInput = document.getElementById("Email") as HTMLInputElement;
+        if (emailInput !== null) {
+          emailInput.value = emptyStr;
+          setEmail(emptyStr);
+          setEmailErrorMsg(undefined);
+        }
 
-      // Reset the Message input field
-      const messageInput = document.getElementById(
-        "Message"
-      ) as HTMLInputElement;
-      if (messageInput !== null) {
-        messageInput.value = emptyStr;
-        setMessage(emptyStr);
-        setMessageErrorMsg(undefined);
-      }
+        // Reset the Subject input field
+        const subjectInput = document.getElementById(
+          "Subject"
+        ) as HTMLInputElement;
+        if (subjectInput !== null) {
+          subjectInput.value = emptyStr;
+          setSubject(emptyStr);
+          setSubjectErrorMsg(undefined);
+        }
 
-      // Form data wasn't valid
-    } else if (res.status === 400) {
-      // Need to explicity declare the types so TypeScript doesn't yell at me
-      const errors: ErrorDict = body.errors;
+        // Reset the Message input field
+        const messageInput = document.getElementById(
+          "Message"
+        ) as HTMLInputElement;
+        if (messageInput !== null) {
+          messageInput.value = emptyStr;
+          setMessage(emptyStr);
+          setMessageErrorMsg(undefined);
+        }
 
-      const inputs = ["Name", "Email", "Subject", "Message"];
-      for (const id of inputs) {
-        const msg = errors[id];
+        // Form data wasn't valid
+      } else if (res.status === 400) {
+        // Need to explicity declare the types so TypeScript doesn't yell at me
+        const errors: ErrorDict = body.errors;
 
-        if (id === "Name") {
-          setNameErrorMsg(msg);
-        } else if (id === "Email") {
-          setEmailErrorMsg(msg);
-        } else if (id === "Subject") {
-          setSubjectErrorMsg(msg);
-        } else if (id === "Message") {
-          setMessageErrorMsg(msg);
+        const inputs = ["Name", "Email", "Subject", "Message"];
+        for (const id of inputs) {
+          const msg = errors[id];
+
+          if (id === "Name") {
+            setNameErrorMsg(msg);
+          } else if (id === "Email") {
+            setEmailErrorMsg(msg);
+          } else if (id === "Subject") {
+            setSubjectErrorMsg(msg);
+          } else if (id === "Message") {
+            setMessageErrorMsg(msg);
+          }
         }
       }
-    }
 
-    // TODO: Notification (takes the status and a message)
-    setNotificationProps({
-      message: body.message,
-      status: res.status
-    });
+      // Notification (takes the status and a message)
+      setNotificationProps({
+        message: body.message,
+        status: res.status
+      });
+    } catch (err) {
+      // Notification (takes the status and a message)
+      setNotificationProps({
+        message: `There was an error handling your request: ${err}`,
+        status: 400
+      });
+    }
 
     // No longer waiting for a response from the server, so reset the loading flag
     setLoading(false);

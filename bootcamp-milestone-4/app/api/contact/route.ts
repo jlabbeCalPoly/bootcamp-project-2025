@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   // validate body
   if (!body) {
     return NextResponse.json(
-      "Issue with the body of your request, please try again",
+      "There is an issue with the body of your request, please try again",
       { status: 404 }
     );
   }
