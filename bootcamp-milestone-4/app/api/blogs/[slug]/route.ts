@@ -21,9 +21,9 @@ import BlogModel from "@/src/database/blogSchema";
    /api/blog/[slug]/route.ts creates { params: { slug: "actual-slug-value" } }
 */
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 /*
