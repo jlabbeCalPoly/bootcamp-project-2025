@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPageLayout from "@/components/blogPageLayout/blogPageLayout";
+import CenteredContainer from "@/components/centeredContainer/centeredContainer";
 import { BlogType } from "@/src/database/blogSchema";
 
 type Props = {
@@ -30,13 +31,15 @@ export default async function FetchBlogData({params}: Props) {
     const blogData: BlogType | null = await getBlog(slug);
 
     if (blogData) {
+        // TODO: add an actual error loading page component
         return (
             <BlogPageLayout blogData={blogData}/>
         );
     } else {
-        // TODO: add an actual error loading page component
         return (
-            <div>Issue loading page</div>
+            <CenteredContainer>
+                <h2>There seemed to be an error loading this page :(</h2>
+            </CenteredContainer>
         );
     }
 }
