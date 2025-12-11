@@ -5,6 +5,7 @@ interface LoadingProps {
     size: string,
 }
 
+// size can either be "small" or "large"
 export default function Loading({size} : LoadingProps) {
     return (
         <div className={Style.loading}>

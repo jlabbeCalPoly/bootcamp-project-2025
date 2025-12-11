@@ -1,38 +1,23 @@
-import React from "react";
-import BlogPageLayout from "@/components/blogPageLayout/blogPageLayout";
-import { BlogType } from "@/src/database/blogSchema";
+import React, { Suspense } from "react";
+import CenteredContainer from "@/components/centeredContainer/centeredContainer";
+import Loading from "@/components/loading/loading";
+import FetchBlogData from "@/src/fetchBlogData/fetchBlogData";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-async function getBlog(slug: string) {
-    try {
-        const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
-            cache: "no-store"
-        });
+export default function BlogPage({params}: Props) {
+    return (
+        <Suspense fallback={
+            <CenteredContainer>
+                <Loading size="large"/>
+            </CenteredContainer>
+        }>
+            <FetchBlogData params={params} />
+        </Suspense>
+    )
 
-        if (!res.ok) {
-            throw new Error("Failed to fetch blog :(");
-        }
-
-        return res.json();
-    } catch(err: unknown) {
-        console.log(`An error occurred: ${err}`);
-        return null;
-    }
-}
-
-export default async function BlogPage({params}: Props) {
-    // required to put await or else Next.js screams at me
-    const { slug } = await params;
-    const blogData: BlogType | null = await getBlog(slug);
-
-    if (blogData) {
-        return (
-            <BlogPageLayout blogData={blogData}/>
-        );
-    }
 }
