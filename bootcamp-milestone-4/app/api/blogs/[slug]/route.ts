@@ -22,8 +22,7 @@ import BlogModel from "@/src/database/blogSchema";
 */
 type IParams = {
   params: Promise<{
-    slug?: string;
-    nxtPSlug?: string;
+    slug: string;
   }>;
 };
 
@@ -40,8 +39,7 @@ type IParams = {
 	the second argument
 */
 export async function GET(req: NextRequest, { params }: IParams) {
-  const aParams = await params; // another destructure
-  const slug = aParams.slug ?? aParams.nxtPSlug;
+  const { slug } = await params; // another destructure
 
   await connectDB(); // function from db.ts before
 
