@@ -2,6 +2,7 @@ import React from "react";
 import BlogPageLayout from "@/components/blogPageLayout/blogPageLayout";
 import CenteredContainer from "@/components/centeredContainer/centeredContainer";
 import { BlogType } from "@/src/database/blogSchema";
+const domain = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
 type Props = {
   params: Promise<{
@@ -11,7 +12,7 @@ type Props = {
 
 async function getBlog(slug: string) {
     try {
-        const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+        const res = await fetch(`${domain}/api/blogs/${slug}`, {
             cache: "no-store"
         });
         const data = await res.json();

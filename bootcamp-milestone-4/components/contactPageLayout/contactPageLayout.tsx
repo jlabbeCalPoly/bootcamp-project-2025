@@ -6,6 +6,7 @@ import Input from "../input/input";
 import LoadingButton from "../loadingButton/loadingButton";
 import Notification, { NotificationProps } from "../notification/notification";
 import Style from "./contactPageLayout.module.css";
+const domain = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
 type ErrorDict = {
   [key: string]: string;
@@ -43,7 +44,7 @@ export default function ContactPageLayout() {
     }
     setLoading(true);
 
-    const res = await fetch("http://localhost:3000/api/contact", {
+    const res = await fetch(`${domain}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
