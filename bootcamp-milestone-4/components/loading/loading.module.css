@@ -1,6 +1,13 @@
 .loading {
     display: flex;
     flex-direction: row;
+}
+
+.loading.small {
+    gap: 1px;
+}
+
+.loading.large {
     gap: 3px;
 }
 

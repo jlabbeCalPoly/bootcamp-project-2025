@@ -23,6 +23,8 @@ export default async function PortfolioPage() {
 
     const portfolios = await getPortfolio()
     return (
-        <PortfolioPageLayout data={portfolios}/>
+        <></>
+        // TODO: Revamp portfolio page
+        // <PortfolioPageLayout data={portfolios}/>
     );
 }

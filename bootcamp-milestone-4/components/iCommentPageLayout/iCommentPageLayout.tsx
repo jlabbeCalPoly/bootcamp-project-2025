@@ -8,6 +8,7 @@ import Input from "../input/input";
 import LoadingButton from "../loadingButton/loadingButton";
 import Notification, { NotificationProps } from "../notification/notification";
 import Style from "./iCommentPageLayout.module.css";
+const domain = process.env.NEXT_PUBLIC_DOMAIN_URL;
 
 type ErrorDict = {
   [key: string]: string;
@@ -42,7 +43,7 @@ export default function CommentPageLayout({data, slug}: CommentProps) {
         }
         setLoading(true);
 
-        const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+        const res = await fetch(`${domain}/api/blogs/${slug}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
