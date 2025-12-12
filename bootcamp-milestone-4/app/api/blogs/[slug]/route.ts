@@ -22,8 +22,8 @@ import BlogModel from "@/src/database/blogSchema";
 */
 type IParams = {
   params: Promise<{
-    slug: string | undefined;
-    nxtPSlug: string | undefined;
+    slug?: string;
+    nxtPSlug?: string;
   }>;
 };
 
