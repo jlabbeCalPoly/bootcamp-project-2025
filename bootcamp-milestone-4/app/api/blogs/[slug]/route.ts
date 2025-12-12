@@ -40,6 +40,7 @@ type IParams = {
 */
 export async function GET(req: NextRequest, { params }: IParams) {
   const { slug } = await params; // another destructure
+  console.log(`Params is: ${params}`);
 
   await connectDB(); // function from db.ts before
 
