@@ -14,14 +14,15 @@ async function getBlog(slug: string) {
         const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
             cache: "no-store"
         });
+        const data = await res.json();
 
-        if (!res.ok) {
-            throw new Error("Failed to fetch blog :(");
+        if (res.status !== 200) {
+            throw new Error(data);
+        } else {
+            return data;
         }
-
-        return await res.json();
     } catch(err: unknown) {
-        console.log(`An error occurred: ${err}`);
+        console.log(`An error occurred while fetching: ${err}`);
         return null;
     }
 }
@@ -31,7 +32,6 @@ export default async function FetchBlogData({params}: Props) {
     const blogData: BlogType | null = await getBlog(slug);
 
     if (blogData) {
-        // TODO: add an actual error loading page component
         return (
             <BlogPageLayout blogData={blogData}/>
         );
