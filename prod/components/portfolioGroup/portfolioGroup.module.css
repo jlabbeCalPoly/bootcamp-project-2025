@@ -1,0 +1,14 @@
+.portfolioGroupContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.portfolioGroupCategory {
+  text-decoration: none;
+
+  font-family: "Sofia";
+  font-size: 16px;
+  color: var(--darkBlue);
+}

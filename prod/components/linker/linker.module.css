@@ -1,0 +1,19 @@
+.linkerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.linkerContainer:hover .linkerArrow {
+    margin-left: 5px;
+}
+
+.linkerArrow {
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    transition: margin-left 0.2s ease-out;
+}

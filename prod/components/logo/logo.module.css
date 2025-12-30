@@ -1,0 +1,49 @@
+/*
+    .logo a {
+        position: relative;
+        background: linear-gradient(to right, var(--gradientBlue), var(--gradientTeal));
+        background-size: 150% 150%;
+        background-clip: text;               
+        -webkit-background-clip: text;       
+        -webkit-text-fill-color: transparent; 
+        margin: 0 12px;
+
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+
+        transition: background-position 0.35s ease;
+        z-index: 2;
+    }
+
+    .logo a:hover {
+        background-position: 100%;
+    }
+*/
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.logo h1 {
+    color: var(--darkBlue);
+    text-decoration: none;
+    margin-left: 5px;
+
+    font-family: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+

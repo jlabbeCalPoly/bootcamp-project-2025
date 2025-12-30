@@ -1,0 +1,16 @@
+.commentContainer {
+    background: var(--transparency05White);
+    border: 1px solid var(--transparency10White);
+    border-radius: 12px 12px 0px 12px;
+    padding: 5px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    backdrop-filter: blur(10px);
+}
+
+.commentFrom {
+    color: var(--transparency40White);
+}

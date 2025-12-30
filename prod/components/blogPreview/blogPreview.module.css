@@ -1,0 +1,28 @@
+.blogPreviewContainer {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    justify-content: space-between;
+    align-items: left; /* center content horizontally */
+    height: 100%;
+}
+
+.blogPreviewBody {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    justify-content: space-between;
+    align-items: left; /* center content horizontally */
+}
+
+.blogPreviewBody h1 {
+    margin-block: 5px;
+}
+
+.blogPreviewImage {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    margin-bottom: 2px;
+}
